@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About TechCon 2024</title>
   <style>
+    /* Consistent styles across all pages for visual uniformity */
     body {
       font-family: Arial, sans-serif;
       line-height: 1.6;
@@ -49,36 +50,59 @@
       margin-bottom: 2rem;
     }
     article h2 {
-      margin-top: 0;
-      font-size: 1.75rem;
       color: #004080;
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+    article p {
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
     }
     article img {
       max-width: 100%;
       height: auto;
-      border-radius: 8px;
-      margin: 1rem 0;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      border-radius: 4px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      display: block; /* Ensures images behave as block elements for margin */
     }
-    .speaker {
+    .speaker-profile {
       display: flex;
       align-items: flex-start;
       margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px dashed #eee; /* Separator for speaker profiles */
     }
-    .speaker img {
-      width: 120px;
-      height: auto;
+    .speaker-profile:last-child {
+      border-bottom: none; /* No border for the last speaker */
+    }
+    .speaker-profile img {
+      width: 100px; /* Fixed width for speaker images */
+      height: 100px; /* Fixed height to make them square */
+      border-radius: 50%; /* Make them circular */
+      object-fit: cover; /* Ensures image covers the area without distortion */
       margin-right: 1rem;
-      flex-shrink: 0;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      flex-shrink: 0; /* Prevents image from shrinking */
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .speaker-info {
-      max-width: calc(100% - 130px);
+      flex-grow: 1; /* Allows info to take remaining space */
+    }
+    .speaker-info h3 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      color: #0056b3;
+    }
+    .mission-icon {
+      width: 50px;
+      height: 50px;
+      fill: #004080; /* Color for the SVG icon */
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
       font-size: 0.9rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -94,49 +118,101 @@
   </header>
 
   <main>
-    <article aria-labelledby="history-heading">
-      <h2 id="history-heading">History</h2>
+    <!-- Article 1: History of TechCon -->
+    <article id="history">
+      <h2>History of TechCon</h2>
       <p>
-        TechCon started in 2010 as a small gathering of technology enthusiasts and has grown into one of the largest annual tech conferences worldwide. Over the years, it has evolved to include workshops, keynote speeches, and networking events that foster innovation and collaboration.
+        TechCon began in 2018 as a small gathering of local tech enthusiasts and
+        has since grown into a globally recognized annual conference. Born from
+        a shared passion for innovation and a desire to foster community,
+        the first TechCon was held in a modest community center, featuring
+        only a handful of speakers.
       </p>
-      <img src="images/history-photo.jpg" alt="Historic photo of the first TechCon conference attendees">
+      <img src="https://placehold.co/600x300/e0e7ff/004080?text=TechCon+2018+First+Event" alt="Archival photo from TechCon 2018, showing early attendees in a small conference room.">
+      <p>
+        Over the years, TechCon has adapted to the rapid pace of technological
+        change, expanding its reach, diversifying its topics, and attracting
+        leading minds from Silicon Valley to emerging tech hubs worldwide.
+        Each year marks a new chapter in our commitment to exploring the
+        frontiers of technology and empowering the next generation of innovators.
+      </p>
+      <img src="https://placehold.co/600x300/d1e0ff/004080?text=TechCon+2022+Growing+Audience" alt="Photo from TechCon 2022, showing a larger audience in a modern auditorium.">
     </article>
 
-    <article aria-labelledby="mission-heading">
-      <h2 id="mission-heading">Mission</h2>
+    <!-- Article 2: Mission of TechCon -->
+    <article id="mission">
+      <h2>Our Mission</h2>
       <p>
-        Our mission is to inspire and empower the global tech community by providing a platform for sharing knowledge, showcasing innovations, and building lasting professional relationships. We strive to create an inclusive environment where everyone can learn and grow.
+        At TechCon, our mission is to accelerate technological progress and foster a
+        vibrant, inclusive tech community. We strive to:
       </p>
-      <img src="images/mission-icon.png" alt="Icon representing innovation and collaboration">
+      <ul>
+        <li>
+          <svg class="mission-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+          </svg>
+          Inspire Innovation: Provide a platform for groundbreaking ideas and emerging technologies.
+        </li>
+        <li>
+          <svg class="mission-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/>
+          </svg>
+          Educate & Empower: Equip attendees with knowledge and skills to navigate the tech landscape.
+        </li>
+        <li>
+          <svg class="mission-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/>
+          </svg>
+          Foster Connection: Create opportunities for networking, collaboration, and mentorship.
+        </li>
+      </ul>
+      <p>
+        We believe that by bringing diverse perspectives together, we can collectively
+        shape a future where technology serves humanity's greatest challenges.
+      </p>
     </article>
 
-    <article aria-labelledby="speakers-heading">
-      <h2 id="speakers-heading">Past Speakers</h2>
-
-      <div class="speaker">
-        <img src="images/speaker-jane-doe.jpg" alt="Photo of Jane Doe">
+    <!-- Article 3: Past Speakers -->
+    <article id="past-speakers">
+      <h2>Notable Past Speakers</h2>
+      <div class="speaker-profile">
+        <img src="https://placehold.co/100x100/cce6ff/004080?text=Dr.+Ava+Chen" alt="Portrait of Dr. Ava Chen">
         <div class="speaker-info">
-          <h3>Jane Doe</h3>
-          <p>Jane is a pioneer in artificial intelligence, known for her groundbreaking research in machine learning algorithms that revolutionized data processing and automation.</p>
+          <h3>Dr. Ava Chen</h3>
+          <p>
+            A leading AI ethicist and former Google AI lead. Dr. Chen delivered a
+            memorable keynote in 2020 on "AI for Good," emphasizing responsible
+            development and societal impact. Her work continues to influence
+            global conversations on AI governance.
+          </p>
         </div>
       </div>
 
-      <div class="speaker">
-        <img src="images/speaker-john-smith.jpg" alt="Photo of John Smith">
+      <div class="speaker-profile">
+        <img src="https://placehold.co/100x100/cce6ff/004080?text=Mr.+Leo+Kim" alt="Portrait of Mr. Leo Kim">
         <div class="speaker-info">
-          <h3>John Smith</h3>
-          <p>John is a cybersecurity expert who has contributed extensively to developing secure communication protocols and educating the community on digital safety.</p>
+          <h3>Mr. Leo Kim</h3>
+          <p>
+            Co-founder of "QuantumLeap Inc." and a pioneer in quantum computing.
+            Mr. Kim captivated the audience at TechCon 2021 with his insights
+            into the commercial applications of quantum technology and its
+            potential to revolutionize industries.
+          </p>
         </div>
       </div>
 
-      <div class="speaker">
-        <img src="images/speaker-anna-lee.jpg" alt="Photo of Anna Lee">
+      <div class="speaker-profile">
+        <img src="https://placehold.co/100x100/cce6ff/004080?text=Ms.+Sara+Lee" alt="Portrait of Ms. Sara Lee">
         <div class="speaker-info">
-          <h3>Anna Lee</h3>
-          <p>Anna is a software engineer and open-source advocate, recognized for her leadership in large-scale software projects and community-driven development.</p>
+          <h3>Ms. Sara Lee</h3>
+          <p>
+            A cybersecurity expert and author of "Digital Fortresses." Ms. Lee
+            shared critical strategies for protecting data in an increasingly
+            interconnected world during TechCon 2022, focusing on zero-trust
+            architectures and threat intelligence.
+          </p>
         </div>
       </div>
-
     </article>
   </main>
 
